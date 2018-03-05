@@ -1,0 +1,99 @@
+<ion-menu side="right" [content]="content">
+
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+
+        <button ion-item (click)="openPage(homePage)">
+            <ion-icon name="home"></ion-icon>    
+            Accueil
+        </button>
+        
+        <ion-list-header>
+            Géolocalisation
+        </ion-list-header>
+
+        <button ion-item (click)="openPage(friendsPage)">
+            <ion-icon name="locate"></ion-icon>  
+            Approximation
+        </button>
+        <button ion-item>
+            <ion-icon name="car"></ion-icon>  
+            Itinéraire
+        </button>
+        <button ion-item>
+            <ion-icon name="pin"></ion-icon>  
+            Me localiser
+        </button>
+        <button ion-item>
+            <ion-icon name="add-circle"></ion-icon>  
+            Place
+        </button>
+        <button ion-item>
+            <ion-icon name="search"></ion-icon>  
+            Recherche de lieu
+        </button>
+
+        <ion-list-header>
+            Fonctionnalité
+        </ion-list-header>
+        <button ion-item (click)="openPage(eventsPage)">
+            <ion-icon name="images"></ion-icon>  
+            Galerie
+        </button>
+        <button ion-item>
+            <ion-icon name="partly-sunny"></ion-icon>
+            Météo
+        </button>
+        <button ion-item>
+                <ion-icon name="information-circle"></ion-icon>  
+            A propos
+        </button>
+        <ion-list-header>
+            Mon Compte
+        </ion-list-header>
+
+        <button ion-item>
+            <ion-icon name="person"></ion-icon>  
+            Moi
+        </button>
+        <button ion-item (click)="closeMenu()">
+            <ion-icon name="log-out"></ion-icon>    
+            Quitter
+        </button>
+        
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+  
+  <ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+  
+  
+
+<!--<ion-menu side="right" [content]="content">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>MENU</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+        <ion-list>
+            <ion-item (click)="gotoaccueil()">
+                Accueil
+            </ion-item>
+            <ion-item (click)="gotoapproximation()">
+                Approximation
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+-->
+<!--<ion-nav [root]="rootPage"></ion-nav>-->
