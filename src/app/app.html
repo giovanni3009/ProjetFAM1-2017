@@ -9,7 +9,7 @@
     <ion-content>
       <ion-list>
 
-        <button ion-item (click)="openPage(homePage)">
+        <button menuClose ion-item (click)="showAccueil()">
             <ion-icon name="home"></ion-icon>    
             Accueil
         </button>
@@ -18,7 +18,7 @@
             Géolocalisation
         </ion-list-header>
 
-        <button ion-item (click)="openPage(friendsPage)">
+        <button menuClose ion-item (click)="showApproximation()">
             <ion-icon name="locate"></ion-icon>  
             Approximation
         </button>
