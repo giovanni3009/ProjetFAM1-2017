@@ -6,12 +6,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { AccueilPage } from '../pages/accueil/accueil';
 import { ApproximationPage } from '../pages/approximation/approximation';
+import { AproposPage } from '../pages/apropos/apropos';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = AccueilPage;
+  rootPage:any = AproposPage;
   @ViewChild(Nav) nav: Nav;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
@@ -25,10 +26,17 @@ export class MyApp {
   }
   private showAccueil(page) {
     this.nav.setRoot(AccueilPage);
+
   }
 
   private showApproximation(page) {
     this.nav.setRoot(ApproximationPage);
+
+  }
+
+  private showApropos(page) {
+    this.nav.setRoot(AproposPage);
+
   }
 
 }
