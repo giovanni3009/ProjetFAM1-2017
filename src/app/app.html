@@ -50,8 +50,8 @@
             <ion-icon name="partly-sunny"></ion-icon>
             Météo
         </button>
-        <button ion-item>
-                <ion-icon name="information-circle"></ion-icon>  
+        <button menuClose ion-item (click)="showApropos()">
+            <ion-icon name="information-circle"></ion-icon>  
             A propos
         </button>
         <ion-list-header>
@@ -62,7 +62,7 @@
             <ion-icon name="person"></ion-icon>  
             Moi
         </button>
-        <button ion-item (click)="closeMenu()">
+        <button ion-item (click)="logout()">
             <ion-icon name="log-out"></ion-icon>    
             Quitter
         </button>

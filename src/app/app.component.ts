@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Platform, Nav } from 'ionic-angular';
+import { Platform, Nav, App,AlertController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -12,10 +12,10 @@ import { AproposPage } from '../pages/apropos/apropos';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = AproposPage;
+  rootPage:any = AccueilPage;
   @ViewChild(Nav) nav: Nav;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public app : App, public alertCtrl: AlertController) {
 
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -36,6 +36,29 @@ export class MyApp {
 
   private showApropos(page) {
     this.nav.setRoot(AproposPage);
+
+  }
+  private logout() {
+
+    let confirm = this.alertCtrl.create({
+      title: 'Quitter?',
+      message: 'Voulez-vous vraiment quitter l\'application?',
+      buttons: [
+        {
+          text: 'Non',
+          handler: () => {
+            console.log('Non');
+          }
+        },
+        {
+          text: 'Oui',
+          handler: () => {
+            this.app.getRootNav().setRoot(HomePage);
+          }
+        }
+      ]
+    });
+    confirm.present();
 
   }
 
