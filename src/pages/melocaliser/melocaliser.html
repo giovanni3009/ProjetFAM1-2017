@@ -1,0 +1,15 @@
+<ion-toolbar color="primary">
+    <button ion-button menuToggle right>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      ME LOCALISER
+    </ion-title>
+</ion-toolbar>
+
+<ion-content>
+  <br><br><br><br>
+  <button ion-button (click)="addMarker()" block color="danger" block><ion-icon name="add"></ion-icon>&nbsp;AFFICHER MA POSITION</button>
+  <br>
+  <div #map id="map"></div>
+</ion-content>

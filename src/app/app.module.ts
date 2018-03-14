@@ -8,7 +8,10 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AccueilPage } from '../pages/accueil/accueil';
 import { ApproximationPage } from '../pages/approximation/approximation';
+import { MelocaliserPage } from '../pages/melocaliser/melocaliser';
 import { AproposPage } from '../pages/apropos/apropos';
+
+import { Geolocation } from '@ionic-native/geolocation';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,8 @@ import { AproposPage } from '../pages/apropos/apropos';
     HomePage,
     AccueilPage,
     ApproximationPage,
-    AproposPage
+    AproposPage,
+    MelocaliserPage
   ],
   imports: [
     BrowserModule,
@@ -28,11 +32,13 @@ import { AproposPage } from '../pages/apropos/apropos';
     HomePage,
     AccueilPage,
     ApproximationPage,
-    AproposPage
+    AproposPage,
+    MelocaliserPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

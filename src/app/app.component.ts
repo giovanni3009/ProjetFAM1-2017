@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { AccueilPage } from '../pages/accueil/accueil';
 import { ApproximationPage } from '../pages/approximation/approximation';
+import { MelocaliserPage } from '../pages/melocaliser/melocaliser';
 import { AproposPage } from '../pages/apropos/apropos';
 
 @Component({
@@ -34,10 +35,16 @@ export class MyApp {
 
   }
 
+  private showMelocaliser(page) {
+    this.nav.setRoot(MelocaliserPage);
+
+  }
+
   private showApropos(page) {
     this.nav.setRoot(AproposPage);
 
   }
+  
   private logout() {
 
     let confirm = this.alertCtrl.create({
