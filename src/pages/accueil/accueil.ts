@@ -15,23 +15,23 @@ export class AccueilPage {
   slider = [
     {
       title: 'Bienvenue sur notre application!',
-      description: '<p style="text-align : left">Une application pour aider les gens desorientés à connaitre son emplacement et son entourage.<p>',
-      image:"/assets/imgs/a.jpg"
+      description: '<p style="text-align : left">Une application pour aider les gens desorientés à connaitre des emplacements.<p>',
+      image:"assets/imgs/a.jpg"
     },
     {
       title: 'Calcul d\'itinéraire :',
-      description: 'Notre application est composée d\'une fonctionnalité de calcul de parcours du point A à point B.' ,
-      image:"/assets/imgs/b.jpg"
+      description: 'Notre application est composée d\'une fonctionnalité de calcul d\'itinéraire de A à B.' ,
+      image:"assets/imgs/b.jpg"
     },
     {
       title: 'Mes lieux!',
       description: 'On peut Enregistrer nos lieux favoris grâce à notre Local Storage.',
-      image:"/assets/imgs/c.jpg"
+      image:"assets/imgs/c.jpg"
     },
     {
       title: 'D\'autres fonctionnalités...',
       description: 'Nous avons aussi une fonctionnalité météorologie et galerie.',
-      image:"/assets/imgs/d.jpg"
+      image:"assets/imgs/d.jpg"
     },
   ];
 

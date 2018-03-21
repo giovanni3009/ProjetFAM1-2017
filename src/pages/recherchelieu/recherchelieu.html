@@ -1,0 +1,23 @@
+<ion-toolbar color="primary">
+    <button ion-button menuToggle right>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      RECHERCHE DE LIEU
+    </ion-title>
+</ion-toolbar>
+    <ion-toolbar color="primary">
+        <ion-searchbar [(ngModel)]="autocomplete.input" (ionInput)="updateSearchResults()" placeholder="Tapez le lieu à rechercher"></ion-searchbar>
+</ion-toolbar>
+
+
+<ion-content>
+    <div id="espace"></div>
+    <ion-list [hidden]="autocompleteItems.length == 0">
+        <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+                  {{ item.description }}
+        </ion-item>
+    </ion-list>
+              
+    <div #map id="map"></div>
+</ion-content>
