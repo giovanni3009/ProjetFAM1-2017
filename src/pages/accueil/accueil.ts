@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, ToastController } from 'ionic-angular';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 
 @Component({
@@ -8,7 +9,9 @@ import { NavController, ToastController } from 'ionic-angular';
 })
 export class AccueilPage {
 
-  constructor(public navCtrl: NavController, private toastctrl: ToastController) {
+  constructor(public navCtrl: NavController, 
+    private afAuth: AngularFireAuth,
+    private toastctrl: ToastController) {
 
   }
 
@@ -35,4 +38,15 @@ export class AccueilPage {
     },
   ];
 
+  ionViewWillLoad() {
+    this.afAuth.authState.subscribe(data => {
+      if(data.email && data.uid)
+      {
+        this.toastctrl.create({
+          message: 'Bienvenue sur Geolocation!',
+          duration: 5000
+        }).present();
+      }
+    })
+  }
 }

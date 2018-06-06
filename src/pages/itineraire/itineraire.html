@@ -1,0 +1,28 @@
+<ion-toolbar color="primary">
+    <button ion-button menuToggle right>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+        ITINERAIRE
+    </ion-title>
+</ion-toolbar>
+<ion-toolbar color="primary">
+        <br/>
+    <ion-list>
+        <ion-item>
+            <ion-label color="primary">Destination :</ion-label>
+            <ion-input type="text" [(ngModel)]="Destination.input"></ion-input>
+        </ion-item>
+        <br/>
+        <button ion-button full (click)="calculateAndDisplayRoute()">Direction</button>
+        <!--<ion-item>
+            <ion-label color="primary">Arrivée :</ion-label>
+            <ion-input></ion-input>
+        </ion-item>-->
+    </ion-list>  
+</ion-toolbar>
+<ion-content>
+    <div id="espace"></div>
+    <div #map id="map"></div>
+</ion-content>
+

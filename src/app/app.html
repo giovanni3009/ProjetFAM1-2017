@@ -22,7 +22,7 @@
             <ion-icon name="locate"></ion-icon>  
             Approximation
         </button>
-        <button ion-item>
+        <button menuClose ion-item (click)="showItineraie()">
             <ion-icon name="car"></ion-icon>  
             Itinéraire
         </button>
@@ -30,11 +30,11 @@
             <ion-icon name="pin"></ion-icon>  
             Me localiser
         </button>
-        <button ion-item>
+        <!--<button ion-item>
             <ion-icon name="add-circle"></ion-icon>  
             Place
-        </button>
-        <button ion-item>
+        </button>-->
+        <button ion-item menuClose (click)="showRecherchelieu()">
             <ion-icon name="search"></ion-icon>  
             Recherche de lieu
         </button>
@@ -42,14 +42,14 @@
         <ion-list-header>
             Fonctionnalité
         </ion-list-header>
-        <button ion-item (click)="openPage(eventsPage)">
+        <!--<button ion-item (click)="openPage(eventsPage)">
             <ion-icon name="images"></ion-icon>  
             Galerie
         </button>
-        <button ion-item>
+        <button menuClose ion-item (click)="showMeteo()">
             <ion-icon name="partly-sunny"></ion-icon>
             Météo
-        </button>
+        </button>-->
         <button menuClose ion-item (click)="showApropos()">
             <ion-icon name="information-circle"></ion-icon>  
             A propos
@@ -57,12 +57,7 @@
         <ion-list-header>
             Mon Compte
         </ion-list-header>
-
-        <button ion-item>
-            <ion-icon name="person"></ion-icon>  
-            Moi
-        </button>
-        <button ion-item (click)="logout()">
+        <button menuClose ion-item (click)="logout()">
             <ion-icon name="log-out"></ion-icon>    
             Quitter
         </button>

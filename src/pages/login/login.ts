@@ -27,6 +27,12 @@ export class LoginPage {
     const result = this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);
     if(result){
       this.navCtrl.push(AccueilPage);
+      /*let alert = this.alertCtrl.create({
+        title: 'Bienvenue!',
+        subTitle: 'Bienvenue sur notre application.',
+        buttons: ['OK']
+      });
+     return alert.present();*/
     }
     }
     catch(e)

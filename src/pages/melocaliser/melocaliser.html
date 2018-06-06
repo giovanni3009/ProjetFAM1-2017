@@ -7,9 +7,11 @@
     </ion-title>
 </ion-toolbar>
 
+<ion-toolbar color="primary">
+    <button ion-button (click)="addMarker()" color="primary" full><ion-icon name="add"></ion-icon>&nbsp;AFFICHER MA POSITION</button>
+</ion-toolbar>
+
 <ion-content>
-  <br><br><br><br>
-  <button ion-button (click)="addMarker()" block color="danger" block><ion-icon name="add"></ion-icon>&nbsp;AFFICHER MA POSITION</button>
-  <br>
+    <div id="espace"></div>
   <div #map id="map"></div>
 </ion-content>

@@ -73,6 +73,7 @@ export class RecherchelieuPage {
           buttons: ['OK']
         });
        return alert.present();
+       
       }
 
       this.autocompleteItems = [];
@@ -102,9 +103,20 @@ export class RecherchelieuPage {
         });
         this.markers.push(marker);
         this.map.setCenter(results[0].geometry.location);
+        let content = "<center><h5>C\'est ici</h5></center>";
+        this.addInfoWindow(marker, content);
       }
     })
   }
+  addInfoWindow(marker, content) {
+    let infoWindow = new google.maps.InfoWindow({
+      content: content
+    });
+    google.maps.event.addListener(marker, 'click', () => {
+      infoWindow.open(this.map, marker);
+    });
+  }
+
 
 
 }
